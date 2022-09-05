@@ -3,11 +3,11 @@ const input = fs.readFileSync(process.platform === 'linux' ? 'dev/stdin' : 'test
 
 const nowTime = input[0].split(' ').map(Number); 
 const takeTime = Number(input[1]);
-const convertedTime = nowTime[0]*60 + nowTime[1] + takeTime;
+let convertedTime = nowTime[0]*60 + nowTime[1] + takeTime;
 
 if(convertedTime >= 1440 ){
-  const newConvertedTime = convertedTime-1440;
-  console.log(`${Math.floor(newConvertedTime/60)} ${newConvertedTime%60}`)
+  convertedTime = convertedTime-1440;
+  console.log(`${Math.floor(convertedTime/60)} ${convertedTime%60}`)
 }else{
   console.log( `${Math.floor(convertedTime/60)} ${convertedTime%60}` );
 }
