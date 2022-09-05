@@ -3,6 +3,14 @@ const input = fs.readFileSync(process.platform === "linux"? "/dev/stdin": __file
 .split(' ').map((el)=>Number(el))
 
 const [A,B] = input
+
 A>B&&console.log('>')
 A<B&&console.log('<')
 A===B&&console.log('==')
+function ab(a){
+    return a.name || console.log('hi')
+}
+let obj = {
+    name : 'hi'
+}
+ab(obj);
