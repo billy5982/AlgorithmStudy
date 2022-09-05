@@ -3,13 +3,8 @@ const input = fs.readFileSync(process.platform === "linux"? "/dev/stdin": __file
 .trim().split('\n').map((item)=>Number(item))
 
 let [A,B] = input;
-if(A>0&&B>0){
-    console.log(1)
-}else if(A<0&&B>0){
-    console.log(2)
-}else if(A<0&&B<0){
-    console.log(3)
-}else if(A>0&&B<0){
-    console.log(4)
-}
+if(A>0&&B>0){console.log(1)}
+if(A<0&&B>0){console.log(2)}
+if(A<0&&B<0){console.log(3)}
+if(A>0&&B<0){console.log(4)}
 
