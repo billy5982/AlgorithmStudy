@@ -5,7 +5,8 @@ const [hour, min] = input;
 const convertedTime = hour*60 + min - 45;
 
 if(convertedTime < 0){
-  console.log( `23 ${convertedTime+60}`);
+  const newConvertedTime = convertedTime + 1440;
+  console.log( `${Math.floor(newConvertedTime/60)} ${newConvertedTime%60}` );
 }else{
   console.log( `${Math.floor(convertedTime/60)} ${convertedTime%60}` );
 }
